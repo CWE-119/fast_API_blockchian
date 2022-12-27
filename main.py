@@ -70,4 +70,5 @@ def is_blockchain_valid():
 def previous_block():
     if not blockchain.is_chain_valid():
         return _fastapi.HTTPException(status_code=400, detail="The blockchain is invalid")
+
     return blockchain.get_previous_block()
